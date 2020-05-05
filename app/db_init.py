@@ -1,10 +1,8 @@
+from app.models import Category, Post
 from app import db
-from models import Category, Post
-
 
 # db.drop_all()
 db.create_all()
-
 
 anime = Category(name='Anime')
 hentai = Category(name='Hentai')

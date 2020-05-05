@@ -41,6 +41,7 @@ class PostSerializer:
                         'url': obj.url,
                         'image_url': obj.image_url,
                         'iframe': obj.iframe,
+                        'category_id': obj.category.id,
                     }
                     self.post_list.append(temp_dict)
                 self.data = json.dumps(self.post_list)
@@ -52,5 +53,6 @@ class PostSerializer:
                 'url': post_object.url,
                 'image_url': post_object.image_url,
                 'iframe': post_object.iframe,
+                'category_id': post_object.category.id,
             }
             self.data = json.dumps(self.post_dict)
